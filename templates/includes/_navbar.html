@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">UPES Alumni</a> 
+      </div>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav">
+          {% if session.logged_in %}
+          <li>
+            <a href="/dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="/tags">Tags</a>
+          </li>
+          <li>
+            <a href="/creategroup">Groups</a>
+          </li>
+          <li>
+          <a href="/managefriend">Friends</a>
+          </li>
+        {% endif %}
+        </ul>
+        <!-- displays corresponding info -->
+        <ul class="nav navbar-nav navbar-right">
+          {% if session.logged_in %}
+          <!-- <li> -->
+          <!--   <a href="/dashboard">Dashboard</a> -->
+          <!-- </li> -->
+          <li>
+            <a href="/logout">Logout</a>
+          </li>
+          {% else %}
+          <li>
+            <a href="/register">Register</a>
+          </li>
+          <li>
+            <a href="/login">Login</a>
+          </li>
+          {% endif %}
+        </ul>
+
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,37 @@
+{% extends 'home.html' %}
+
+{% block body %}
+
+<html>
+<head>
+</head>
+
+<body>
+    <h2>Add Friend</h2>
+    <br />
+    <form action="/addfriends" method="POST">
+        <p>Seems like there are more than one user with same name! Please enter your friend's username:</p>
+        <input type="text" class = "form-control" name = "username" placeholder="Your Friend's Username" required/>
+        <br/>
+        <input type="submit" class="btn btn-primary" value=Continue />
+    </form>
+    <br/>
+    <h2>Delete Friend</h2>
+    <form action="/deletefriend" method="POST">
+        <label for="username">Friend's Username</label>
+        <input type="text" class = "form-control" name = "username" placeholder="Your Friend's Username" required/>
+        <br/>
+        <label for="group_name">Group Name</label>
+        <input type="text" class = "form-control" name = "group_name" placeholder="Group Name" required/>
+        <br/>
+        <label for="username_creator">Your Username</label>
+        <input type="text" class = "form-control" name = "username_creator" placeholder="Your Username" required/>
+        <br/>
+        <br/>
+        <input type="submit" class="btn btn-primary" value=Delete />
+    </form>
+</body>
+
+</html>
+
+{% endblock %}
